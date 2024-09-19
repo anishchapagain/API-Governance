@@ -1,0 +1,23 @@
+rules:
+  info-title:
+    description: "The API title must be present."
+    severity: "error"
+    given: "$.info.title"
+    then:
+      function: truthy
+
+  info-version:
+    description: "The API version must be specified."
+    severity: "error"
+    given: "$.info.version"
+    then:
+      function: truthy
+
+  operation-ids:
+    description: "All operations must have unique IDs."
+    severity: "warning"
+    given: "$.paths.*.*"
+    then:
+      function: unique
+      functionOptions:
+        property: "operationId"

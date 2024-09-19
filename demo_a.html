@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linting Results</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .details { display: none; }
+        .toggle { cursor: pointer; color: blue; }
+        .circle { 
+            width: 20px; 
+            height: 20px; 
+            border-radius: 50%; 
+            display: inline-block; 
+            margin-right: 5px; 
+        }
+        .error-circle { background-color: red; }
+        .warning-circle { background-color: orange; }
+    </style>
+</head>
+<body>
+
+<div class="container mt-4">
+    <h1 class="mb-4">Linting Results</h1>
+    <div id="summary" class="mb-4"></div>
+    
+    <h2>Errors</h2>
+    <table id="error-table" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Message</th>
+                <th>Path</th>
+                <th>Location</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody id="error-results"></tbody>
+    </table>
+
+    <h2>Warnings</h2>
+    <table id="warning-table" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Message</th>
+                <th>Path</th>
+                <th>Location</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody id="warning-results"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
